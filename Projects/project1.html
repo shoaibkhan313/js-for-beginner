@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Scheme Switcher</title>
+    <style>
+        /* Light mode styles */
+        .light-mode {
+            --background-color: #f0f0f0;
+            --text-color: #333;
+        }
+
+        /* Dark mode styles */
+        .dark-mode {
+            --background-color: #333;
+            --text-color: #fff;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        /* Apply light mode when #light is targeted */
+        #light:target {
+            --background-color: #f0f0f0;
+            --text-color: #333;
+        }
+
+        /* Apply dark mode when #dark is targeted */
+        #dark:target {
+            --background-color: #333;
+            --text-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Color Scheme Switcher</h1>
+        <p>Click on the buttons below to switch color schemes:</p>
+        <a href="#light"><button>Light Mode</button></a>
+        <a href="#dark"><button>Dark Mode</button></a>
+    </div>
+</body>
+</html>
